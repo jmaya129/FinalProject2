@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import "./App.css";
 import Card from "./Components/Card";
 import Navbar from "./Components/Navbar";
+import data from "./Components/data";
 
 class App extends Component {
   constructor(props) {

@@ -12,9 +12,11 @@ function Navbar() {
               placeholder="Search"
               aria-label="Search"
             />
-            <button class="btn btn-outline-success" type="submit">
+
+            <button onclick="getElementById('demo').innerHTML=data()">
               Search
             </button>
+            <p id="demo"></p>
           </form>
         </div>
       </nav>
