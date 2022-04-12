@@ -1,14 +1,15 @@
 import React, { Component } from "react";
 import "./App.css";
-import Card from "./Components/Card";
+
 import Navbar from "./Components/Navbar";
-import data from "./Components/data";
 
 class App extends Component {
   constructor(props) {
     super(props);
-    this.state = {};
-    data: [];
+    this.state = {
+      //add state here
+      data: []
+    };
   }
   componentDidMount = () => {
     fetch(
@@ -27,14 +28,13 @@ class App extends Component {
     return (
       <div className="App">
         <h1>Tree Finder</h1>
+        <Navbar />
         <section className="list">{/* PUT API RESPONSE DATA HERE */}</section>
         {this.state.data.map((application) => (
           <li>
-            {application.app_no}: {application.other_requirements}
+            {application.app_no}:{application.other_requirments}
           </li>
         ))}
-
-        <Navbar />
       </div>
     );
   }
