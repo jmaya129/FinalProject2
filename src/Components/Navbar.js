@@ -1,6 +1,11 @@
 import React from "react";
 
-function Navbar() {
+function Navbar(props) {
+  const data = [];
+  Search = (props) => {
+    onclick = console.log(this.state.data.find((e) => "output" === "input"));
+  };
+
   return (
     <nav class="navbar navbar-light bg-light">
       <div class="container-fluid">

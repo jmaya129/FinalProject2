@@ -28,11 +28,12 @@ class App extends Component {
     return (
       <div className="App">
         <h1>Tree Finder</h1>
-        <Navbar />
+        <Navbar data={this.state.data} />
         <section className="list">{/* PUT API RESPONSE DATA HERE */}</section>
         {this.state.data.map((application) => (
           <li>
-            {application.app_no}:{application.other_requirments}
+            {application.tree_id}
+            {application.other_requirments}
           </li>
         ))}
       </div>
