@@ -7,10 +7,22 @@ class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      //add state here
-      data: []
+      foundData: []
     };
   }
+  //Mapping Data
+  findData = () => {
+    const list = this.state.data;
+    const found = [];
+    for (var i = 0; i < list.length; i++) {
+      if (list[i].spc_common) {
+        found.push(list[i].spc_common);
+      }
+    }
+    this.setState({ foundData: found });
+  };
+
+  //fetching data
   componentDidMount = () => {
     fetch(
       "https://data.cityofnewyork.us/resource/uvpi-gqnh.json?$$app_token=EhwYR2nqCIBmEXdrvrs8D3FpE"
@@ -18,6 +30,7 @@ class App extends Component {
       .then((response) => response.json())
       .then((data) => {
         this.setState({ data: data });
+        console.log(this.state.data);
       })
       .catch((e) => {
         alert(e);
@@ -29,13 +42,6 @@ class App extends Component {
       <div className="App">
         <h1>Tree Finder</h1>
         <Navbar data={this.state.data} />
-        <section className="list">{/* PUT API RESPONSE DATA HERE */}</section>
-        {this.state.data.map((application) => (
-          <li>
-            {application.tree_id}
-            {application.other_requirments}
-          </li>
-        ))}
       </div>
     );
   }

@@ -1,11 +1,13 @@
 import React from "react";
 
 function Navbar(props) {
-  const data = [];
-  Search = (props) => {
-    onclick = console.log(this.state.data.find((e) => "output" === "input"));
-  };
+  console.log(props);
 
+  const findData = () => {
+    for (let i = 0; i < props.data.length; i++) {
+      console.log(props.data[i].spc_common);
+    }
+  };
   return (
     <nav class="navbar navbar-light bg-light">
       <div class="container-fluid">
@@ -17,7 +19,13 @@ function Navbar(props) {
             placeholder="Search"
             aria-label="Search"
           />
-          <button class="btn btn-outline-success" type="submit">
+          <button
+            type="button"
+            class="btn btn-primary"
+            onClick={() => {
+              findData();
+            }}
+          >
             Search
           </button>
         </form>
