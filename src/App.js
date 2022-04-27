@@ -1,7 +1,8 @@
 import React, { Component } from "react";
 import "./App.css";
-
 import Navbar from "./Components/Navbar";
+import "./App.css";
+import Home from "./Components/home";
 
 class App extends Component {
   constructor(props) {
@@ -42,6 +43,7 @@ class App extends Component {
       <div className="App">
         <h1>Tree Finder</h1>
         <Navbar data={this.state.data} />
+        <Home />
       </div>
     );
   }
