@@ -1,6 +1,7 @@
 .App {
   text-align: center;
-  <p style="background-image: url('');">
 }
 
-
+.Navbar {
+  color: green;
+}

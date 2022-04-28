@@ -16,7 +16,7 @@ function Navbar(props) {
           <input
             class="form-control me-2"
             type="search"
-            placeholder="Search"
+            placeholder="Type in a Tree"
             aria-label="Search"
           />
           <button
