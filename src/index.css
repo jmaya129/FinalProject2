@@ -2,9 +2,8 @@ body {
   margin: 0;
   padding: 0;
   font-family: sans-serif;
-  background-image: url('https://images.pexels.com/photos/788485/pexels-photo-788485.jpeg?cs=srgb&dl=pexels-madison-inouye-788485.jpg&fm=jpg');
+  background-image: url("https://images.pexels.com/photos/788485/pexels-photo-788485.jpeg?cs=srgb&dl=pexels-madison-inouye-788485.jpg&fm=jpg");
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: 100% 100%;
-}
 }
