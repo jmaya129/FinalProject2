@@ -5,16 +5,11 @@ import "/src/Components/css/Navbar.css";
 function Navbar(props) {
   console.log(props);
 
-  // When the user scrolls the page, execute myFunction
-  window.onscroll = function () {
-    myFunction();
-  };
-
   // Get the navbar
-  var navbar = document.getElementById("Navbar");
+  var navbar = document.getElementById("navbar");
 
   // Get the offset position of the navbar
-  var sticky = Navbar.offsetTop;
+  var sticky = navbar.offsetTop;
 
   // Add the sticky class to the navbar when you reach its scroll position. Remove "sticky" when you leave the scroll position
   function myFunction() {
@@ -24,6 +19,11 @@ function Navbar(props) {
       navbar.classList.remove("sticky");
     }
   }
+
+  // When the user scrolls the page, execute myFunction
+  window.onscroll = function () {
+    myFunction();
+  };
 
   const findData = () => {
     for (let i = 0; i < props.data.length; i++) {
@@ -37,26 +37,31 @@ function Navbar(props) {
   }
 
   return (
-    <nav class="navbar navbar-light bg-light">
+    <nav id="navbar" class="navbar navbar-light bg-dark">
       <div class="container-fluid">
-        <a class="navbar-brand"> </a>
-        <form class="d-flex">
-          <input
-            class="form-control me-2"
-            type="search"
-            placeholder="Type in a Tree"
-            aria-label="Search"
-          />
-          <button
-            type="button"
-            class="btn btn-primary"
-            onClick={() => {
-              findData();
-            }}
-          >
-            Search
-          </button>
-        </form>
+        <div class="sticky">
+          <div class="content">
+            <a class="navbar-brand"> </a>
+            <form class="d-flex">
+              <input
+                class="form-control me-2"
+                type="search"
+                placeholder="Type in a Tree"
+                aria-label="Search"
+              />
+              <button
+                type="button"
+                class="btn btn-success"
+                onClick={() => {
+                  findData();
+                  console.log(results());
+                }}
+              >
+                Search
+              </button>
+            </form>
+          </div>
+        </div>
       </div>
     </nav>
   );
