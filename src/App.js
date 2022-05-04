@@ -1,25 +1,22 @@
 import React, { Component } from "react";
-import { VictoryBar } from 'victory';
+//import { VictoryBar } from 'victory';
 import "./App.css";
-import results from "./Components/pages/results";
+import results from "/src/Components/pages/results";
 import Navbar from "./Components/Navbar/Navbar";
 
+//const App = () => {
+//const Component = new React.Component();
 
-const App = () => {
- const Component = new React.Component();
+//component.render = () => {
+//return(
+// <div className="App">
+// <div className="card">
+//<victoryBar />
 
- component.render = () => {
-   return(
-     <div className="App">
-       <div className="card">
-         <victoryBar />
-
-         </div>
-         </div>
-   );
- }
- 
-
+//</div>
+//</div>
+//);
+//}
 
 class App extends Component {
   constructor(props) {
