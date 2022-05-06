@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 //import { VictoryBar } from 'victory';
 import "./App.css";
-import results from "/src/Components/pages/results";
 import Navbar from "./Components/Navbar/Navbar";
 
 //const App = () => {
@@ -56,7 +55,6 @@ class App extends Component {
     return (
       <div className="App">
         <Navbar data={this.state.data} />
-        <results />
       </div>
     );
   }
