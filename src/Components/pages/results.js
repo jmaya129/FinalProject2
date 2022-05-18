@@ -8,7 +8,7 @@ class results extends Component {
     return (
       <div className="results">
         <Navbar data={this.state.data} />
-        console.log('results')
+        <results />
       </div>
     );
   }

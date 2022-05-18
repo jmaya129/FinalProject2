@@ -1,5 +1,4 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import smoothscroll from "smoothscroll-polyfill";
 import results from "/src/Components/pages/results";
 import "/src/Components/css/Navbar.css";
@@ -30,18 +29,17 @@ function Navbar(props) {
                 placeholder="Type in a Tree"
                 aria-label="Search"
               />
-              <Link to="/results">
-                <button
-                  type="button"
-                  class="btn btn-success"
-                  onClick={() => {
-                    findData();
-                    //console.log(results());   printing out the locations of the trees
-                  }}
-                >
-                  Search
-                </button>
-              </Link>
+
+              <button
+                type="button"
+                class="btn btn-success"
+                onClick={() => {
+                  findData();
+                  //console.log(results());   printing out the locations of the trees
+                }}
+              >
+                Search
+              </button>
             </form>
           </div>
         </div>
