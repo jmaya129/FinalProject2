@@ -2,7 +2,7 @@ import React, { Component } from "react";
 //import { VictoryBar } from 'victory';
 import "./App.css";
 import Navbar from "./Components/Navbar/Navbar";
-
+import ReviewCard from "./Components/ReviewCard/ReviewCard";
 //const App = () => {
 //const Component = new React.Component();
 
@@ -24,6 +24,7 @@ class App extends Component {
       foundData: []
     };
   }
+
   //Mapping Data
   findData = () => {
     const list = this.state.data;
@@ -55,6 +56,10 @@ class App extends Component {
     return (
       <div className="App">
         <Navbar data={this.state.data} />
+        <ReviewCard />
+        <div className="container">
+          <div className="row"></div>
+        </div>
       </div>
     );
   }
