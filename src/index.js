@@ -1,7 +1,12 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import App from "./App";
-import results from "/src/Components/pages/results";
 import "./index.css";
+import Router from "./Router";
 
-ReactDOM.render(<App />, document.getElementById("root"));
+//copy from slide 10 I will finish later MHAWHA - Love your favorite girlfriend
+// and only... raises eyebrows
+
+const root = ReactDOM.createRoot(document.getElementById("root"));
+root.render(<Router />);
+
+export default index;

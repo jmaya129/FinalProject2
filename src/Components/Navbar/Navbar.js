@@ -1,6 +1,5 @@
 import React from "react";
 import smoothscroll from "smoothscroll-polyfill";
-import results from "/src/Components/pages/results";
 import "/src/Components/css/Navbar.css";
 
 smoothscroll.polyfill();
@@ -11,38 +10,45 @@ function Navbar(props) {
     }
   };
 
-  function results(e) {
-    e.preventDefault();
-    window.location = "my-app/src/Components/results";
-  }
-
   return (
-    <nav id="navbar" class="navbar navbar-light bg-dark">
-      <div class="container-fluid">
-        <div class="sticky">
-          <div class="content">
-            <a class="navbar-brand"> </a>
-            <form class="d-flex">
-              <input
-                class="form-control me-2"
-                type="search"
-                placeholder="Type in a Tree"
-                aria-label="Search"
-              />
-
-              <button
-                type="button"
-                class="btn btn-success"
-                onClick={() => {
-                  findData();
-                  //console.log(results());   printing out the locations of the trees
-                }}
-              >
-                Search
-              </button>
-            </form>
-          </div>
-        </div>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <a class="navbar-brand" href="App.js">
+        Treestagram
+      </a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarText"
+        aria-controls="navbarText"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarText">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="App.js">
+              Home <span class="sr-only">(current)</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="HoneyLocust">
+              HoneyLocust
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="PinOak">
+              PinOak
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="American">
+              American Linban
+            </a>
+          </li>
+        </ul>
       </div>
     </nav>
   );
