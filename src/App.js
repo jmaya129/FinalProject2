@@ -14,9 +14,7 @@ class App extends Component {
     data: [],
     boroname: "Manhattan",
     search: "",
-    PinOakHisto: [],
-    AmericanHisto: [],
-    hlHisto: []
+    
   };
 
   //fetching data
@@ -29,29 +27,8 @@ class App extends Component {
         const dataHolder = data.slice(0, 100);
         this.setState({ data: dataHolder });
 
-        const AmericanHisto = [];
-        const PinOakHisto = [];
-        const hlHisto = [];
-
-        // Push histogram data
-        data.forEach((item) => {
-          const histoItem = {};
-          if (item.score) {
-            histoItem.x = parseFloat(item.score);
-            if (item.boro.toLowerCase() === "American Linban") {
-              AmericanHisto.push(histoItem);
-            } else if (item.boro.toLowerCase() === "pin oak") {
-              PinOakHisto.push(histoItem);
-            } else if (item.boro.toLowerCase() === "honeylocust") {
-              hlHisto.push(histoItem);
-            }
-          }
-        });
-        this.setState({ AmericanHisto });
-        this.setState({ PinOakHisto });
-        this.setState({ hlHisto });
-      });
-  }
+        
+       
 
   // search for the value when the button is clicked
   search = (event) => {
@@ -76,29 +53,24 @@ class App extends Component {
     // Print values to the screen
     filteredResults.forEach((item) => {
       if (!item.dba) return;
-      filteredRestaurants.push(item.dba);
+      filteredCommon.push(item.dba);
     });
 
     this.setState({ filteredCommon });
   };
 
+
   render() {
     return (
       <div className="App">
-        //
         <div className="grid">
           <CardContainer data={this.state.data} />
         </div>
-        //
+
         <Navbar data={this.state.data} />
         <Word />
-        //
-        <div id="histo">
-          <Histogram data={this.state.AmericanHisto} boroname="Manhattan" />
-          <Histogram data={this.state.PinoakHisto} boroname="Manhattan" />
-          <Histogram data={this.state.brooklynHisto} boroname="Manhattan" />
-        </div>
-        //
+
+        
       </div>
     );
   }

@@ -8,11 +8,11 @@ import HoneyLocust from "./Components/pages/HoneyLocust";
 const Router = () => (
   <BrowserRouter>
     <Routes>
-      <Route exact path="/" element={<HoneyLocust />}></Route>
-      <Route path="/stats" element={<App />}></Route>
+      {/* <Route exact path="/" element={<HoneyLocust />}></Route> */}
+      <Route path="/" element={<App />}></Route>
 
-      <Route path="*" element={<Pinoak />}></Route>
-      <Route path="!" element={<American />}></Route>
+      {/* <Route path="*" element={<Pinoak />}></Route> */}
+      {/* <Route path="!" element={<American />}></Route> */}
     </Routes>
   </BrowserRouter>
 );

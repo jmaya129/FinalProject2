@@ -1,6 +1,6 @@
 import React from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import App from "./App";
+import App from "/src/App";
 import Pinoak from "./pages/PinOak";
 import American from "./pages/American";
 import HoneyLocust from "./pages/HoneyLocust";
