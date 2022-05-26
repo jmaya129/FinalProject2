@@ -4,11 +4,6 @@ import "/src/Components/css/Navbar.css";
 
 smoothscroll.polyfill();
 function Navbar(props) {
-  const findData = () => {
-    for (let i = 0; i < props.data.length; i++) {
-      console.log(props.data[i].spc_common);
-    }
-  };
 
   return (
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
