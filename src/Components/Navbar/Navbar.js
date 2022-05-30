@@ -1,10 +1,12 @@
 import React from "react";
 import smoothscroll from "smoothscroll-polyfill";
 import "/src/Components/css/Navbar.css";
+import HoneyLocust from "/src/Components/pages/HoneyLocust";
+import PinOak from "/src/Components/pages/PinOak";
+import American from "/src/Components/pages/American";
 
 smoothscroll.polyfill();
 function Navbar(props) {
-
   return (
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
       <a class="navbar-brand" href="App.js">
@@ -29,17 +31,17 @@ function Navbar(props) {
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="HoneyLocust">
+            <a class="nav-link" href="HoneyLocust.js">
               HoneyLocust
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="PinOak">
+            <a class="nav-link" href="PinOak.js">
               PinOak
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="American">
+            <a class="nav-link" href="American.js">
               American Linban
             </a>
           </li>
